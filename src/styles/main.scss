@@ -1,11 +1,14 @@
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
+@use 'plans';
 
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Bold.woff2);
     font-weight: 400;
 }
+
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Regular.woff2);
@@ -16,11 +19,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+ul {
+    list-style-type: none;
 }
 
 body {
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 @mixin text($fontSize: 16px) {
@@ -44,7 +51,6 @@ body {
 
 .text--small {
     @include text(12px);
-    
 }
 
 .title {
@@ -65,3 +71,16 @@ body {
     text-decoration: underline;
 }
 
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+}
